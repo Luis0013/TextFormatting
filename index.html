@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation of Fext</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">FORMATE SEU TEXTO</div>
+    </header>
+    <main class="container">
+        <section id="titles">
+            <h1>Edite seu texto</h1>
+            <h2>Utilize as diversas formatações dispoiveis</h2>
+        </section>
+        <section id="form">
+            <form action="#" id="boxOfText">
+                    <div id="original">
+                        <label for="textOriginal">Digite seu texto abaixo</label>
+                        <textarea name="textOriginal" id="textOriginal" cols="30" rows="10"></textarea>
+                    </div>
+                
+                    <div id="result">
+                        <label for="textResult">O resultado é esse</label>
+                        <textarea name="textResult" id="textResult" cols="30" rows="10"></textarea>
+                    </div>
+            </form> 
+        </section>
+        <section class="conversores">
+            <div class="conversores">
+                <input type="button" value="Maiúsculas" id="maiuscula" onclick="conversores.maiuscula(Original)">
+
+                <input type="button" value="Minusculas" id="minuscula" onclick="conversores.minuscula(Original)">
+
+                <input type="button" value="Quantidade de caracteres" id="caracteres" onclick="conversores.caracteres(Original)">
+
+                <input type="button" value="Sem espaços" id="noSpaces" onclick="conversores.noSpaces(Original)">
+
+                <input type="button" value="Primeira letra maiuscula" id="preimeiraMaiuscula" onclick="conversores.primeiraMaiuscula(Original)">
+
+                <input type="button" value="Inverter texto" id="inverterTexto" onclick="conversores.inverterTexto(Original)">
+            </div>
+        </section>
+    </main>
+    <footer><p>2021 - @luis0013</p></footer>
+   <script src="script.js"></script> 
+</body>
+</html>
