@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
 :root{
@@ -13,8 +14,14 @@
 body{
     background-color: var(--cor-fundo);
     font-family: "KoHo", "sans-serif";
+    padding-top: 2.5em;
 }
 /* Header */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 header .container{
     display: flex;
     background-color: var(--azul-claro);
@@ -43,11 +50,12 @@ h2{
 
 /* Box of text */
 #boxOfText{
+    padding: 0 10px;
     height: 20em;
     width: 50em;
     display: flex;   
-    justify-content: center;
     margin: 0 auto;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0.932);
     border-radius: 1em;
 }
@@ -71,10 +79,13 @@ label{
 }
 
 /* conversores */
+section.conversores{
+    margin: 0 auto;
+    display: flex;
+}
 div.conversores{
-    margin: 1.2em 0 7em 0;
+    margin: 2.5em auto 7em auto;
     width: 50em;
-    text-align: center;
     display: inline-block;
 }
 input:hover{
@@ -106,16 +117,78 @@ footer{
     background-color: var(--azul-claro);
     padding: 1rem 0 1rem 0;
     font-weight: 700;
-    width: 100%;
+    width: 100vw;
 }
 
 /* responsive */
 /* max-width --> até 780px (0px - 780px) */
+@media (max-width: 830px){
+    #boxOfText{
+        width: 45em;
+    }
+}
 @media (max-width: 780px){
     h1{
         font-size: 2em;
     }
     h2{
         font-size: 1em;
+    }
+}
+@media (max-width: 730px){
+    #boxOfText{
+        width: 43em;
+    }
+    #result, #original{
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+}
+@media (max-width: 700px){
+    #boxOfText{
+        width: 40em;
+    }
+    #result, #original{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+@media (max-width: 660px){
+    #boxOfText{
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.932);
+        width: 29em;
+        height: 26em;
+    }
+    #result{
+        margin-bottom: .8em;
+    }
+}
+@media (max-width: 505px){
+    #boxOfText{
+        width: 23em;
+    }
+}
+@media (max-width: 492px){
+    input{
+        margin-bottom: 1em;
+    
+    }
+}
+@media (max-width: 390px){
+    #boxOfText{
+        width: 20em;
+    }
+}
+@media (max-width: 320px){
+    #boxOfText{
+        width: 18em;
+    }
+    #result, #original{
+        margin: 0 auto;
+    }
+    section.conversores{
+        margin-left: 0;
+        margin-right: .5em;
     }
 }
